@@ -2,9 +2,9 @@ export default {
   nav: {
     logo: 'Portfolio',
     links: [
-      { text: 'About', to: '#about' },
-      { text: 'Projects', to: '#projects' },
-      { text: 'Contact', to: '#contact' },
+      { text: 'About', to: 'about' },
+      { text: 'Projects', to: 'projects' },
+      { text: 'Contact', to: 'contact' },
     ],
   },
 
@@ -12,6 +12,10 @@ export default {
     intro: 'Hi, my name is',
     title: 'Alex Rios.',
     subtitle: 'I like to build things!',
+    link: {
+      text: 'Read More',
+      to: 'about',
+    },
   },
 
   about: {
@@ -74,7 +78,16 @@ export default {
   contact: {
     title: 'Contact',
     text: `Quis, atque obcaecati impedit dicta natus distinctio dolor inventore quos vel.`,
-    button: 'Click Here',
-    email: 'mailto:alexrios.dev@gmail.com',
+    link: {
+      text: 'Click Here',
+      to: 'mailto:alexrios.dev@gmail.com',
+    },
+  },
+
+  resume: {
+    link: {
+      text: 'Resume',
+      to: 'google.com',
+    },
   },
 };

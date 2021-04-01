@@ -1,32 +1,38 @@
 import React from 'react';
 import content from '../content';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const NavLink = ({ link }) => {
   return (
     <li className="nav-item">
-      <a
-        className="px-3 py-2 flex items-center text-base uppercase font-thin leading-snug text-white hover:opacity-75"
-        href={link.to}
+      <Link
+        activeClass="active"
+        className="px-3 py-2 flex items-center text-base uppercase font-thin leading-snug cursor-pointer text-white hover:text-emerald-300"
+        to={link.to}
+        spy={true}
+        smooth={true}
+        offset={-40}
+        duration={500}
       >
         {link.text}
-      </a>
+      </Link>
     </li>
   );
 };
 
 export const Nav = () => {
-  const { nav } = content;
+  const { nav, resume } = content;
   const [menuOpen, setMenuOpen] = React.useState(false);
   return (
     <>
       <nav className="flex flex-wrap">
-        <div className="w-full font-mono">
+        <div className="fixed w-full font-mono">
           <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-black">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
                 <a
-                  className="text-base font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-                  href="#"
+                  className="text-base font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase cursor-pointer text-white "
+                  onClick={() => scroll.scrollToTop()}
                 >
                   {nav.logo}
                 </a>
@@ -66,6 +72,14 @@ export const Nav = () => {
                   {nav.links.map((link, idx) => {
                     return <NavLink link={link} key={idx} />;
                   })}
+                  <li className="nav-item">
+                    <a
+                      className="px-3 py-2 flex items-center text-base uppercase font-thin leading-snug rounded-full bg-white text-black transition duration-300 ease-in-out hover:bg-emerald-300 hover:text-white"
+                      href={resume.link.to}
+                    >
+                      {resume.link.text}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
