@@ -14,8 +14,8 @@ export const Contact = () => {
           </h1>
           <p className="md:text-lg text-base mb-8">{contact.text}</p>
           <a
+            className="px-5 py-2 text-base font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-white hover:text-cyan-300"
             href={link.to}
-            className="border-2 border-white rounded-lg font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-white hover:text-gray-800 mr-6"
           >
             {link.text}
           </a>

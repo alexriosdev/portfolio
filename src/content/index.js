@@ -1,6 +1,6 @@
 export default {
   nav: {
-    logo: 'Portfolio',
+    logo: 'AR',
     links: [
       { text: 'About', to: 'about' },
       { text: 'Projects', to: 'projects' },

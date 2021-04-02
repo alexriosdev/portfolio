@@ -20,7 +20,7 @@ export const Hero = () => {
           </h1>
           <Link
             activeClass="active"
-            className="px-4 py-3 rounded-full bg-black text-white font-bold transition duration-500 ease-in-out hover:bg-cyan-300"
+            className="px-5 py-3 rounded-full bg-black text-white font-bold transition duration-500 ease-in-out hover:bg-cyan-300"
             to={link.to}
             spy={true}
             smooth={true}

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .active {
-  @apply text-emerald-300;
+  @apply text-cyan-300;
 }
