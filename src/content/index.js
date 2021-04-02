@@ -42,8 +42,14 @@ export default {
           'https://raw.githubusercontent.com/alexriosdev/teamweek-app/master/frontend/public/demo.gif',
         tools: [
           { name: 'React', link: 'https://reactjs.org/' },
-          { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
+          { name: 'Redux', link: 'https://redux.js.org/' },
+          { name: 'Rails', link: 'https://rubyonrails.org/' },
+          { name: 'Material UI', link: 'https://material-ui.com/' },
         ],
+        link: {
+          text: 'View Code',
+          to: 'https://github.com/alexriosdev/teamweek-app',
+        },
       },
       {
         title: 'Starships',
@@ -51,9 +57,17 @@ export default {
         img:
           'https://raw.githubusercontent.com/alexriosdev/team_starship/master/demo.gif',
         tools: [
-          { name: 'React', link: 'https://reactjs.org/' },
-          { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
+          {
+            name: 'C#',
+            link: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+          },
+          { name: 'Unity', link: 'https://unity.com/' },
+          { name: 'Blender', link: 'https://www.blender.org/' },
         ],
+        link: {
+          text: 'View Code',
+          to: 'https://github.com/alexriosdev/team_starship',
+        },
       },
       {
         title: 'Recipe Vault',
@@ -61,10 +75,11 @@ export default {
           'Lightweight CLI application that allows users to create, save and share their favorite food recipes.',
         img:
           'https://raw.githubusercontent.com/alexriosdev/recipe-vault/main/lib/demo.gif',
-        tools: [
-          { name: 'React', link: 'https://reactjs.org/' },
-          { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
-        ],
+        tools: [{ name: 'Ruby', link: 'https://www.ruby-lang.org/en/' }],
+        link: {
+          text: 'View Code',
+          to: 'https://github.com/alexriosdev/recipe-vault',
+        },
       },
       {
         img:
@@ -73,9 +88,17 @@ export default {
         text:
           'Single page application for avid movie and tv show watchers to help them keep track of their shows. Users can search titles, add them to their personal collection and give them a review.',
         tools: [
-          { name: 'React', link: 'https://reactjs.org/' },
-          { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
+          {
+            name: 'JavaScript',
+            link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          },
+          { name: 'Rails', link: 'https://rubyonrails.org/' },
+          { name: 'Bulma', link: 'https://bulma.io/' },
         ],
+        link: {
+          text: 'View Code',
+          to: 'https://github.com/alexriosdev/tv-hub',
+        },
       },
     ],
     link: {

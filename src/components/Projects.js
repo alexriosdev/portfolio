@@ -1,15 +1,36 @@
 import React from 'react';
 import content from '../content';
+
 const Card = ({ project }) => {
   return (
-    <div className="bg-white w-full my-8 flex lg:flex-row flex-col  font-mono">
+    <div className="bg-white w-full my-10 flex lg:flex-row flex-col font-mono">
       <img
         className="block h-auto w-full lg:h-1/2 lg:w-96 rounded"
         src={project.img}
       />
       <div className="lg:mx-8 lg:my-0 my-4 text-black">
         <div className="font-semibold text-2xl mb-2">{project.title}</div>
-        <p className=" text-base text-gray-800">{project.text}</p>
+        <p className=" text-base text-gray-800 mb-4">{project.text}</p>
+        Built with:
+        <div className="flex">
+          {project.tools.map((tool, idx) => {
+            return (
+              <a
+                className="mb-6 mr-4 transition duration-500 ease-in-out hover:text-cyan-300"
+                href={tool.link}
+                key={idx}
+              >
+                {tool.name}
+              </a>
+            );
+          })}
+        </div>
+        <a
+          className="px-5 py-2 text-base font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300"
+          href={project.link.to}
+        >
+          {project.link.text}
+        </a>
       </div>
     </div>
   );
