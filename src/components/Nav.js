@@ -76,7 +76,7 @@ export const Nav = () => {
                   })}
                   <li className="nav-item">
                     <a
-                      className="px-5 py-2 flex items-center text-base uppercase font-bold leading-snug rounded-full bg-white text-black transition duration-500 ease-in-out hover:bg-cyan-300 hover:text-white"
+                      className="lg:my-0 my-2 px-5 py-2 flex items-center text-base uppercase font-bold leading-snug rounded-full bg-white text-black transition duration-500 ease-in-out hover:bg-cyan-300 hover:text-white"
                       href={resume.link.to}
                     >
                       {resume.link.text}
