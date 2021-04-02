@@ -7,7 +7,6 @@ export const Contact = () => {
   return (
     <section id="contact">
       <div className=" bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center">
-        {' '}
         <div className="md:mx-20 mx-10 my-10 font-mono md:w-2/3">
           <h1 className="md:text-6xl text-4xl font-bold mb-4">
             {contact.title}

@@ -1,3 +1,5 @@
+const year = new Date().getFullYear().toString();
+
 export default {
   nav: {
     logo: 'AR',
@@ -87,7 +89,14 @@ export default {
   resume: {
     link: {
       text: 'Resume',
-      to: 'google.com',
+      to: 'https:/google.com',
+    },
+  },
+
+  footer: {
+    link: {
+      text: `© ${year} alexriosdev`,
+      to: 'https:/github.com/alexriosdev',
     },
   },
 };
