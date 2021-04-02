@@ -32,56 +32,63 @@ export default {
 
   experience: {
     title: 'Projects',
-    text: `Here is a showcase of all the applications I've built.`,
+    text: `Here is a showcase of the applications I've built.`,
     projects: [
       {
-        img: 'https://source.unsplash.com/random',
-        title: 'Project 1',
+        title: 'TeamWeek',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet dolor provident, suscipit officiis quo voluptatum commodi quos doloremque dolorem recusandae quae illum voluptas, at optio esse non rem nesciunt!',
+          'Full Stack employee scheduling/management application using Rails and React.',
+        img:
+          'https://raw.githubusercontent.com/alexriosdev/teamweek-app/master/frontend/public/demo.gif',
         tools: [
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
         ],
       },
       {
-        img: 'https://source.unsplash.com/random',
-        title: 'Project 2',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet dolor provident, suscipit officiis quo voluptatum commodi quos doloremque dolorem recusandae quae illum voluptas, at optio esse non rem nesciunt!',
+        title: 'Starships',
+        text: 'Starfox64 inspired space shooter built with the Unity Engine.',
+        img:
+          'https://raw.githubusercontent.com/alexriosdev/team_starship/master/demo.gif',
         tools: [
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
         ],
       },
       {
-        img: 'https://source.unsplash.com/random',
-        title: 'Project 3',
+        title: 'Recipe Vault',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet dolor provident, suscipit officiis quo voluptatum commodi quos doloremque dolorem recusandae quae illum voluptas, at optio esse non rem nesciunt!',
+          'Lightweight CLI application that allows users to create, save and share their favorite food recipes.',
+        img:
+          'https://raw.githubusercontent.com/alexriosdev/recipe-vault/main/lib/demo.gif',
         tools: [
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
         ],
       },
       {
-        img: 'https://source.unsplash.com/random',
-        title: 'Project 4',
+        img:
+          'https://raw.githubusercontent.com/alexriosdev/tv-hub/main/tv-hub-backend/lib/assets/demo.gif',
+        title: 'tv hub 📺',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet dolor provident, suscipit officiis quo voluptatum commodi quos doloremque dolorem recusandae quae illum voluptas, at optio esse non rem nesciunt!',
+          'Single page application for avid movie and tv show watchers to help them keep track of their shows. Users can search titles, add them to their personal collection and give them a review.',
         tools: [
           { name: 'React', link: 'https://reactjs.org/' },
           { name: 'Ruby', link: 'https://www.ruby-lang.org/en/' },
         ],
       },
     ],
+    link: {
+      text: 'View More',
+      to: 'https:/github.com/alexriosdev',
+    },
   },
 
   contact: {
-    title: 'Contact',
-    text: `Quis, atque obcaecati impedit dicta natus distinctio dolor inventore quos vel.`,
+    title: 'Get In Touch',
+    text: `Interested in working together? My inbox is always open. Whether you have a question or just want to connect, I'll try my best to get back to you!`,
     link: {
-      text: 'Click Here',
+      text: 'Say Hello',
       to: 'mailto:alexrios.dev@gmail.com',
     },
   },

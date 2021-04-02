@@ -2,14 +2,12 @@ import React from 'react';
 import content from '../content';
 const Card = ({ project }) => {
   return (
-    <div className="bg-white w-full my-8 flex md:flex-row flex-col  font-mono">
-      <div
-        className="h-48 w-auto md:w-48 flex-none bg-cover rounded"
-        style={{
-          backgroundImage: `url(${project.img})`,
-        }}
-      ></div>
-      <div className="md:mx-8 md:my-0 my-4 text-black">
+    <div className="bg-white w-full my-8 flex lg:flex-row flex-col  font-mono">
+      <img
+        className="block h-auto w-full lg:h-1/2 lg:w-96 rounded"
+        src={project.img}
+      />
+      <div className="lg:mx-8 lg:my-0 my-4 text-black">
         <div className="font-semibold text-2xl mb-2">{project.title}</div>
         <p className=" text-base text-gray-800">{project.text}</p>
       </div>
@@ -33,6 +31,12 @@ export const Projects = () => {
             return <Card project={project} key={idx} />;
           })}
         </div>
+        <a
+          className="mb-10 px-5 py-2 text-base font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300"
+          href={experience.link.to}
+        >
+          {experience.link.text}
+        </a>
       </div>
     </section>
   );
