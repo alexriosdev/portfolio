@@ -1,5 +1,6 @@
 import React from 'react';
 import content from '../content';
+import { useOnScreen } from './Observer';
 
 const Card = ({ project }) => {
   return (
@@ -37,11 +38,19 @@ const Card = ({ project }) => {
 };
 
 export const Projects = () => {
+  const [setRef, visible] = useOnScreen({ threshold: 0.2 });
   const { experience } = content;
   return (
     <section id="projects">
-      <div className="bg-white flex flex-col justify-center items-center">
-        <div className="md:mx-20 mx-10 my-10 font-mono md:w-2/3">
+      <div
+        ref={setRef}
+        className="bg-white flex flex-col justify-center items-center"
+      >
+        <div
+          className={`md:mx-20 mx-10 my-10 font-mono md:w-2/3 ${
+            visible ? 'animate-fade-in-right ' : 'opacity-0'
+          }`}
+        >
           <h1 className="md:text-6xl text-4xl font-bold text-black">
             {experience.title}
           </h1>

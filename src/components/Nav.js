@@ -27,13 +27,13 @@ export const Nav = () => {
 
   return (
     <>
-      <nav className="flex flex-wrap">
+      <nav className="flex flex-wrap relative z-50">
         <div className="fixed w-full font-mono">
-          <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-black">
-            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <nav className="flex flex-wrap items-center justify-between py-0 bg-black text-white">
+            <div className="container lg:px-20 md:px-10 px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <a
-                  className="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug cursor-pointer text-white transition duration-500 ease-in-out hover:text-cyan-300"
+                  className="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug cursor-pointer transition duration-500 ease-in-out hover:text-cyan-300"
                   onClick={() => scroll.scrollToTop()}
                 >
                   {nav.logo}

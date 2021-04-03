@@ -1,15 +1,25 @@
 import React from 'react';
 import content from '../content';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { useOnScreen } from './Observer';
 
 export const Hero = () => {
   const { hero } = content;
   const { link } = hero;
+  const [setRef, visible] = useOnScreen({ threshold: 0.5 });
+
   return (
     <section id="hero">
-      <div className="text-white h-screen flex flex-col justify-center items-center">
-        <div className="md:mx-20 mx-10 font-mono md:w-2/3">
-          <h1 className="md:text-lg text-base font-light text-black">
+      <div
+        ref={setRef}
+        className="text-black h-screen flex flex-col justify-center items-center"
+      >
+        <div
+          className={`md:mx-20 mx-10 font-mono md:w-2/3 ${
+            visible ? 'animate-fade-in-right' : 'opacity-0'
+          }`}
+        >
+          <h1 className={'md:text-lg text-base font-light text-black'}>
             {hero.intro}
           </h1>
           <h1 className="md:text-6xl text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-emerald-300">
