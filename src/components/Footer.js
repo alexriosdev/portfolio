@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHeart, FaReact } from 'react-icons/fa';
-import content from '../content';
+import { content } from '../content/data';
 
 export const Footer = () => {
   const { footer } = content;

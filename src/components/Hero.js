@@ -1,13 +1,12 @@
 import React from 'react';
-import content from '../content';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { useOnScreen } from './Observer';
+import { content } from '../content/data';
 
 export const Hero = () => {
+  const [setRef, visible] = useOnScreen({ threshold: 0.4 });
   const { hero } = content;
   const { link } = hero;
-  const [setRef, visible] = useOnScreen({ threshold: 0.4 });
-
   return (
     <section id="hero">
       <div

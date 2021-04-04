@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '../content';
 import { useOnScreen } from './Observer';
+import { content } from '../content/data';
 
 export const About = () => {
   const [setRef, visible] = useOnScreen({ threshold: 0.05 });
@@ -21,7 +21,7 @@ export const About = () => {
             <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-black cursor-pointer">
               <img
                 src={about.img}
-                alt="profile picture"
+                alt="avatar"
                 className="object-cover object-center w-full h-full visible group-hover:hidden"
               />
             </div>

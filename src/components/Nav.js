@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '../content';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { content } from '../content/data';
 
 export const Nav = () => {
   const { nav, resume } = content;
@@ -32,12 +32,12 @@ export const Nav = () => {
           <nav className="flex flex-wrap items-center justify-between py-0 bg-black text-white">
             <div className="container lg:px-20 md:px-10 px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                <a
+                <button
                   className="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug cursor-pointer transition duration-500 ease-in-out hover:text-cyan-300"
                   onClick={() => scroll.scrollToTop()}
                 >
                   {nav.logo}
-                </a>
+                </button>
                 <button
                   className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transition duration-500 ease-in-out hover:text-cyan-300"
                   type="button"

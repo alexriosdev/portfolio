@@ -1,6 +1,6 @@
 const year = new Date().getFullYear().toString();
 
-export default {
+export const content = {
   nav: {
     logo: 'AR',
     links: [

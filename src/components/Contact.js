@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '../content';
 import { useOnScreen } from './Observer';
+import { content } from '../content/data';
 
 export const Contact = () => {
   const [setRef, visible] = useOnScreen({ threshold: 0.2 });

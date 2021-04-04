@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '../content';
 import { useOnScreen } from './Observer';
+import { content } from '../content/data';
 
 const Card = ({ project }) => {
   const [setRef, visible] = useOnScreen({ threshold: 0.16 });
@@ -14,6 +14,7 @@ const Card = ({ project }) => {
           visible ? 'animate-fade-in-right ' : 'opacity-0'
         }`}
         src={project.img}
+        alt={project.title}
       />
       <div
         className={`lg:mx-8 lg:my-0 my-4 text-black ${
@@ -65,7 +66,6 @@ const ViewMore = ({ link }) => {
 export const Projects = () => {
   const [setRef, visible] = useOnScreen({ threshold: 0.05 });
   const { experience } = content;
-
   return (
     <section id="projects">
       <div
