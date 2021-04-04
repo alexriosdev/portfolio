@@ -14,6 +14,7 @@ export const Nav = () => {
           className="px-3 py-2 flex items-center text-base uppercase font-thin leading-snug cursor-pointer text-white transition duration-300 ease-in-out hover:text-cyan-300"
           to={link.to}
           spy={true}
+          hashSpy={true}
           smooth={true}
           offset={-40}
           onClick={() => setMenuOpen(false)}
