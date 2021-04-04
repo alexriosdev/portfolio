@@ -6,7 +6,7 @@ import { useOnScreen } from './Observer';
 export const Hero = () => {
   const { hero } = content;
   const { link } = hero;
-  const [setRef, visible] = useOnScreen({ threshold: 0.5 });
+  const [setRef, visible] = useOnScreen({ threshold: 0.4 });
 
   return (
     <section id="hero">
@@ -16,7 +16,7 @@ export const Hero = () => {
       >
         <div
           className={`md:mx-20 mx-10 font-mono md:w-2/3 ${
-            visible ? 'animate-fade-in-right' : 'opacity-0'
+            visible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
         >
           <h1 className={'md:text-lg text-base font-light text-black'}>

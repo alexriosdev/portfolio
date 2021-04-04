@@ -1,13 +1,22 @@
 import React from 'react';
 import content from '../content';
+import { useOnScreen } from './Observer';
 
 export const Contact = () => {
+  const [setRef, visible] = useOnScreen({ threshold: 0.2 });
   const { contact } = content;
   const { link } = contact;
   return (
     <section id="contact">
-      <div className=" bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center">
-        <div className="md:mx-20 mx-10 my-10 font-mono md:w-2/3">
+      <div
+        ref={setRef}
+        className=" bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center"
+      >
+        <div
+          className={`md:mx-20 mx-10 my-10 font-mono md:w-2/3 ${
+            visible ? 'animate-fade-in-up' : 'opacity-0'
+          }`}
+        >
           <h1 className="md:text-6xl text-4xl font-bold mb-4">
             {contact.title}
           </h1>

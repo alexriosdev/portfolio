@@ -3,13 +3,23 @@ import content from '../content';
 import { useOnScreen } from './Observer';
 
 const Card = ({ project }) => {
+  const [setRef, visible] = useOnScreen({ threshold: 0.16 });
   return (
-    <div className="bg-white w-full my-10 flex lg:flex-row flex-col font-mono">
+    <div
+      ref={setRef}
+      className="bg-white w-full my-10 flex lg:flex-row flex-col font-mono"
+    >
       <img
-        className="block h-auto w-full lg:h-1/2 lg:w-96 rounded"
+        className={`block h-auto w-full lg:h-1/2 lg:w-96 rounded ${
+          visible ? 'animate-fade-in-right ' : 'opacity-0'
+        }`}
         src={project.img}
       />
-      <div className="lg:mx-8 lg:my-0 my-4 text-black">
+      <div
+        className={`lg:mx-8 lg:my-0 my-4 text-black ${
+          visible ? 'animate-fade-in-left ' : 'opacity-0'
+        }`}
+      >
         <div className="font-semibold text-2xl mb-2">{project.title}</div>
         <p className=" text-base text-gray-800 mb-4">{project.text}</p>
         Built with:
@@ -37,9 +47,25 @@ const Card = ({ project }) => {
   );
 };
 
+const ViewMore = ({ link }) => {
+  const [setRef, visible] = useOnScreen({ threshold: 0.16 });
+  return (
+    <a
+      ref={setRef}
+      className={`mb-10 px-5 py-2 text-base font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300 ${
+        visible ? 'animate-fade-in-down' : 'opacity-0'
+      }`}
+      href={link.to}
+    >
+      {link.text}
+    </a>
+  );
+};
+
 export const Projects = () => {
-  const [setRef, visible] = useOnScreen({ threshold: 0.2 });
+  const [setRef, visible] = useOnScreen({ threshold: 0.05 });
   const { experience } = content;
+
   return (
     <section id="projects">
       <div
@@ -48,7 +74,7 @@ export const Projects = () => {
       >
         <div
           className={`md:mx-20 mx-10 my-10 font-mono md:w-2/3 ${
-            visible ? 'animate-fade-in-right ' : 'opacity-0'
+            visible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
         >
           <h1 className="md:text-6xl text-4xl font-bold text-black">
@@ -61,12 +87,7 @@ export const Projects = () => {
             return <Card project={project} key={idx} />;
           })}
         </div>
-        <a
-          className="mb-10 px-5 py-2 text-base font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300"
-          href={experience.link.to}
-        >
-          {experience.link.text}
-        </a>
+        <ViewMore link={experience.link} />
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import content from '../content';
 import { useOnScreen } from './Observer';
 
 export const About = () => {
-  const [setRef, visible] = useOnScreen({ threshold: 0.2 });
+  const [setRef, visible] = useOnScreen({ threshold: 0.1 });
   const { about } = content;
   return (
     <section id="about">
@@ -13,7 +13,7 @@ export const About = () => {
       >
         <div
           className={`md:mx-20 mx-10 my-10 font-mono md:w-2/3 ${
-            visible ? 'animate-fade-in-right ' : 'opacity-0'
+            visible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
         >
           <h1 className="md:text-6xl text-4xl font-bold ">{about.title}</h1>
