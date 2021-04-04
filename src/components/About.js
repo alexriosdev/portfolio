@@ -3,7 +3,7 @@ import content from '../content';
 import { useOnScreen } from './Observer';
 
 export const About = () => {
-  const [setRef, visible] = useOnScreen({ threshold: 0.1 });
+  const [setRef, visible] = useOnScreen({ threshold: 0.05 });
   const { about } = content;
   return (
     <section id="about">
