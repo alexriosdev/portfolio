@@ -8,10 +8,7 @@ export const Contact = () => {
   const { link } = contact;
   return (
     <section id="contact">
-      <div
-        ref={setRef}
-        className=" bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center"
-      >
+      <div ref={setRef} className="bg-secondary">
         <div
           className={`md:mx-20 mx-10 my-10 md:w-2/3 ${
             visible ? 'animate-fade-in-up' : 'opacity-0'
@@ -21,10 +18,7 @@ export const Contact = () => {
             {contact.title}
           </h1>
           <p className="md:text-lg mb-8">{contact.text}</p>
-          <a
-            className="px-5 py-2 md:text-lg font-title font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-white hover:text-cyan-300"
-            href={link.to}
-          >
+          <a className="btn-secondary" href={link.to}>
             {link.text}
           </a>
         </div>

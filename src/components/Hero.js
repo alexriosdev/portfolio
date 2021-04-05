@@ -9,10 +9,7 @@ export const Hero = () => {
   const { link } = hero;
   return (
     <section id="hero">
-      <div
-        ref={setRef}
-        className="text-black h-screen flex flex-col justify-center items-center"
-      >
+      <div ref={setRef} className="bg-primary h-screen">
         <div
           className={`md:mx-20 mx-10 md:w-2/3 ${
             visible ? 'animate-fade-in-up' : 'opacity-0'
@@ -21,7 +18,7 @@ export const Hero = () => {
           <h1 className={'font-mono md:text-lg text-base font-light'}>
             {hero.intro}
           </h1>
-          <h1 className="md:text-6xl text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-emerald-300">
+          <h1 className="md:text-6xl text-4xl font-extrabold text-gradient-cyan">
             {hero.title}
           </h1>
           <h1 className="md:text-6xl text-4xl font-bold mb-4">
@@ -29,14 +26,14 @@ export const Hero = () => {
           </h1>
           <Link
             activeClass="active"
-            className="px-5 py-2 rounded-full bg-black text-white md:text-lg font-title font-bold transition duration-500 ease-in-out hover:bg-cyan-300"
+            className="btn-primary-helper"
             to={link.to}
             spy={true}
             smooth={true}
             offset={-40}
             duration={500}
           >
-            {link.text}
+            <span className="btn-primary">{link.text}</span>
           </Link>
         </div>
       </div>

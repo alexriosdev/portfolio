@@ -11,7 +11,7 @@ export const Nav = () => {
       <li className="nav-item">
         <Link
           activeClass="active"
-          className="px-3 py-2 flex items-center uppercase font-title font-normal leading-snug cursor-pointer text-white transition duration-300 ease-in-out hover:text-cyan-300"
+          className="px-3 py-2 flex items-center uppercase font-title leading-snug cursor-pointer hover-gradient"
           to={link.to}
           spy={true}
           hashSpy={true}
@@ -34,34 +34,36 @@ export const Nav = () => {
             <div className="container lg:px-20 md:px-10 px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <button
-                  className="px-3 py-2 flex items-center text-2xl uppercase font-title font-bold leading-snug cursor-pointer transition duration-500 ease-in-out hover:text-cyan-300"
+                  className="px-3 py-2 text-2xl uppercase font-title font-bold focus:outline-none hover-gradient"
                   onClick={() => scroll.scrollToTop()}
                 >
                   {nav.logo}
                 </button>
                 <button
-                  className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transition duration-500 ease-in-out hover:text-cyan-300"
+                  className="inline-flex justify-center items-center lg:hidden focus:outline-none bg-gradient-to-r from-cyan-400 to-emerald-300"
                   type="button"
                   onClick={() => setMenuOpen(!menuOpen)}
                 >
-                  <svg
-                    className="h-6 w-6 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d={
-                        menuOpen
-                          ? 'M6 18L18 6M6 6l12 12'
-                          : 'M4 6h16M4 12h16M4 18h16'
-                      }
-                    />
-                  </svg>
+                  <span className="flex-1 px-3 py-3 bg-black text-2xl transition duration-500 ease-in-out hover:bg-opacity-0">
+                    <svg
+                      className="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d={
+                          menuOpen
+                            ? 'M6 18L18 6M6 6l12 12'
+                            : 'M4 6h16M4 12h16M4 18h16'
+                        }
+                      />
+                    </svg>
+                  </span>
                 </button>
               </div>
               <div
@@ -77,10 +79,10 @@ export const Nav = () => {
                   })}
                   <li className="nav-item">
                     <a
-                      className="lg:my-0 my-2 px-5 py-2 flex items-center uppercase font-title font-bold leading-snug rounded-full bg-white text-black transition duration-500 ease-in-out hover:bg-cyan-300 hover:text-white"
+                      className="lg:my-0 my-2 btn-primary-helper"
                       href={resume.link.to}
                     >
-                      {resume.link.text}
+                      <span className="btn-resume">{resume.link.text}</span>
                     </a>
                   </li>
                 </ul>

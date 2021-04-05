@@ -7,10 +7,7 @@ export const About = () => {
   const { about } = content;
   return (
     <section id="about">
-      <div
-        ref={setRef}
-        className="bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center"
-      >
+      <div ref={setRef} className="bg-secondary">
         <div
           className={`md:mx-20 mx-10 my-10 md:w-2/3 ${
             visible ? 'animate-fade-in-up' : 'opacity-0'

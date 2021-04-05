@@ -6,18 +6,15 @@ export const Footer = () => {
   const { footer } = content;
   return (
     <section id="footer">
-      <div className="bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex justify-center items-center">
+      <div className="bg-secondary">
         <div className="py-3 text-xs flex flex-col items-center w-full mt-20 bg-black">
-          <div className="flex">
+          <div className="font-mono flex">
             Made with&nbsp;
-            <FaHeart className="my-1 text-xm text-red-500" />
+            <FaHeart className="mt-0.5 text-xm text-red-500" />
             &nbsp;&&nbsp;
-            <FaReact className="my-1 text-xm text-cyan-300" />
+            <FaReact className="mt-0.5 text-xm text-cyan-300" />
           </div>
-          <a
-            className="transition duration-500 ease-in-out hover:text-cyan-300"
-            href={footer.link.to}
-          >
+          <a className="font-mono hover-gradient" href={footer.link.to}>
             {footer.link.text}
           </a>
         </div>

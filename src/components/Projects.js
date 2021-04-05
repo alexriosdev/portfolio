@@ -5,10 +5,7 @@ import { content } from '../content/data';
 const Card = ({ project }) => {
   const [setRef, visible] = useOnScreen({ threshold: 0.16 });
   return (
-    <div
-      ref={setRef}
-      className="bg-white text-black w-full my-10 flex lg:flex-row flex-col"
-    >
+    <div ref={setRef} className="w-full my-10 flex lg:flex-row flex-col">
       <a
         className={`flex-none block h-auto w-full lg:h-1/2 lg:w-96 ${
           visible ? 'animate-fade-in-right' : 'opacity-0'
@@ -33,7 +30,7 @@ const Card = ({ project }) => {
           {project.tools.map((tool, idx) => {
             return (
               <a
-                className="mb-6 mr-4 md:text-lg font-title font-bold transition duration-500 ease-in-out hover:text-cyan-300"
+                className="mb-6 mr-4 md:text-lg font-title font-bold hover-gradient"
                 href={tool.link}
                 key={idx}
               >
@@ -42,11 +39,8 @@ const Card = ({ project }) => {
             );
           })}
         </div>
-        <a
-          className="px-5 py-2 md:text-lg font-title font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300"
-          href={project.link.to}
-        >
-          {project.link.text}
+        <a className="btn-primary-helper" href={project.link.to}>
+          <span className="btn-primary">{project.link.text}</span>
         </a>
       </div>
     </div>
@@ -58,12 +52,12 @@ const ViewMore = ({ link }) => {
   return (
     <a
       ref={setRef}
-      className={`mb-10 px-5 py-2 md:text-lg font-title font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-cyan-300 ${
+      className={`mb-10 btn-primary-helper ${
         visible ? 'animate-fade-in-down' : 'opacity-0'
       }`}
       href={link.to}
     >
-      {link.text}
+      <span className="btn-primary">{link.text}</span>
     </a>
   );
 };
@@ -73,10 +67,7 @@ export const Projects = () => {
   const { experience } = content;
   return (
     <section id="projects">
-      <div
-        ref={setRef}
-        className="bg-white text-black flex flex-col justify-center items-center"
-      >
+      <div ref={setRef} className="bg-primary">
         <div
           className={`md:mx-20 mx-10 my-10 md:w-2/3 ${
             visible ? 'animate-fade-in-up' : 'opacity-0'
