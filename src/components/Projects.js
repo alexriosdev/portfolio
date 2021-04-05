@@ -9,13 +9,18 @@ const Card = ({ project }) => {
       ref={setRef}
       className="bg-white w-full my-10 flex lg:flex-row flex-col font-mono"
     >
-      <img
-        className={`block h-auto w-full lg:h-1/2 lg:w-96 rounded ${
-          visible ? 'animate-fade-in-right ' : 'opacity-0'
+      <a
+        className={`flex-none block h-auto w-full lg:h-1/2 lg:w-96 ${
+          visible ? 'animate-fade-in-right' : 'opacity-0'
         }`}
-        src={project.img}
-        alt={project.title}
-      />
+        href={project.link.to}
+      >
+        <img
+          className="rounded transform transition duration-500 hover:scale-110"
+          src={project.img}
+          alt={project.title}
+        />
+      </a>
       <div
         className={`lg:mx-8 lg:my-0 my-4 text-black ${
           visible ? 'animate-fade-in-left ' : 'opacity-0'
