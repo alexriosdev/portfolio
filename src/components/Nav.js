@@ -67,10 +67,9 @@ export const Nav = () => {
                 </button>
               </div>
               <div
-                className={
-                  'lg:flex flex-grow items-center' +
-                  (menuOpen ? ' flex justify-center' : ' hidden')
-                }
+                className={`lg:flex flex-grow items-center ${
+                  menuOpen ? 'flex justify-center' : ' hidden'
+                }`}
                 id="example-navbar-info"
               >
                 <ul className="flex flex-col items-center lg:flex-row list-none lg:ml-auto">

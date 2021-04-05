@@ -20,7 +20,7 @@ const Card = ({ project }) => {
       </a>
       <div
         className={`lg:mx-8 lg:my-0 my-4 ${
-          visible ? 'animate-fade-in-left ' : 'opacity-0'
+          visible ? 'animate-fade-in-left' : 'opacity-0'
         }`}
       >
         <h1 className="font-bold text-2xl mb-2">{project.title}</h1>

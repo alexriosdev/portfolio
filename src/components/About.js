@@ -13,18 +13,17 @@ export const About = () => {
             visible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
         >
-          <h1 className="md:text-6xl text-4xl font-bold ">{about.title}</h1>
+          <h1 className="md:text-6xl text-4xl font-bold">{about.title}</h1>
           <div className="md:w-48 md:h-48 w-32 h-32 mx-auto my-8">
-            <div className="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-black cursor-pointer">
+            <div className="w-full h-full rounded-full overflow-hidden shadow-inner bg-black">
               <img
                 src={about.img}
                 alt="avatar"
-                className="object-cover object-center w-full h-full visible group-hover:hidden"
+                className="object-cover object-center w-full h-full"
               />
             </div>
           </div>
-          <p className="md:text-lg mb-8">{about.text}</p>
-          <p className="md:text-lg">{about.text}</p>
+          <p className="md:text-lg mb-2">{about.text}</p>
         </div>
       </div>
     </section>
