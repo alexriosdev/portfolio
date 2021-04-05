@@ -84,7 +84,7 @@ export const content = {
       {
         img:
           'https://raw.githubusercontent.com/alexriosdev/tv-hub/main/tv-hub-backend/lib/assets/demo.gif',
-        title: 'tv hub 📺',
+        title: 'tv hub',
         text:
           'Single page application for avid movie and tv show watchers to help them keep track of their shows. Users can search titles, add them to their personal collection and give them a review.',
         tools: [

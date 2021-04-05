@@ -40,7 +40,7 @@ export const Nav = () => {
                   {nav.logo}
                 </button>
                 <button
-                  className="inline-flex justify-center items-center lg:hidden focus:outline-none bg-gradient-to-r from-cyan-400 to-emerald-300"
+                  className="inline-flex justify-center items-center lg:hidden focus:outline-none main-bg-gradient"
                   type="button"
                   onClick={() => setMenuOpen(!menuOpen)}
                 >
@@ -82,7 +82,7 @@ export const Nav = () => {
                       className="lg:my-0 my-2 btn-primary-helper"
                       href={resume.link.to}
                     >
-                      <span className="btn-resume">{resume.link.text}</span>
+                      <span className="btn-nav">{resume.link.text}</span>
                     </a>
                   </li>
                 </ul>

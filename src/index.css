@@ -14,16 +14,24 @@
 }
 
 @layer components {
+  .main-bg-gradient {
+    @apply bg-gradient-to-r from-cyan-400 to-emerald-300;
+  }
+
+  .light-bg-gradient {
+    @apply bg-gradient-to-r from-cyan-300 to-emerald-300;
+  }
+
+  .active {
+    @apply text-gradient;
+  }
+
   .bg-primary {
     @apply bg-white text-black flex flex-col justify-center items-center;
   }
 
   .bg-secondary {
-    @apply bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center;
-  }
-
-  .bg-secondary-magenta {
-    @apply bg-gradient-to-l from-purple-400 via-pink-500 to-red-500 text-white flex flex-col justify-center items-center;
+    @apply main-bg-gradient text-white flex flex-col justify-center items-center;
   }
 
   .btn-primary {
@@ -31,30 +39,56 @@
   }
 
   .btn-primary-helper {
-    @apply inline-flex rounded-full bg-gradient-to-r from-cyan-400 to-emerald-300;
+    @apply inline-flex rounded-full main-bg-gradient;
   }
 
-  .btn-resume {
-    @apply flex-1 px-5 py-2 rounded-full font-title font-bold uppercase bg-white text-black transition duration-500 ease-in-out hover:bg-opacity-0  hover:text-white;
+  .btn-nav {
+    @apply flex-1 px-5 py-2 rounded-full font-title font-bold uppercase bg-white text-black transition duration-500 ease-in-out hover:bg-opacity-0 hover:text-white;
+  }
+
+  .btn-secondary-helper {
+    @apply inline-flex rounded-full bg-black transition duration-500 ease-in-out hover:bg-white;
   }
 
   .btn-secondary {
-    @apply px-5 py-2 md:text-lg font-title font-bold leading-snug rounded-full bg-black text-white transition duration-500 ease-in-out hover:bg-white hover:text-cyan-300;
+    @apply flex-1 px-5 py-2 rounded-full md:text-lg font-title font-bold text-white text-gradient transition duration-500 ease-in-out hover:text-opacity-0;
   }
 
-  .text-gradient-cyan {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-emerald-300;
-  }
-
-  .text-gradient-magenta {
-    @apply bg-clip-text text-transparent bg-gradient-to-l from-purple-400 via-pink-500 to-red-500;
+  .text-gradient {
+    @apply bg-clip-text text-transparent light-bg-gradient;
   }
 
   .hover-gradient {
-    @apply transition duration-500 ease-in-out bg-clip-text hover:text-transparent bg-gradient-to-r hover:from-cyan-400 hover:to-emerald-300;
+    @apply transition duration-500 ease-in-out bg-clip-text hover:text-transparent light-bg-gradient;
   }
 
-  .active {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-emerald-300;
+  /* Golden Cherry Theme */
+
+  .main-bg-gradient {
+    @apply bg-gradient-to-r from-red-500 to-orange-400;
   }
+
+  .light-bg-gradient {
+    @apply bg-gradient-to-r from-red-500 to-yellow-400;
+  }
+
+  /* Cyan Theme */
+
+  /* .main-bg-gradient {
+    @apply bg-gradient-to-r from-cyan-400 to-emerald-300;
+  }
+
+  .light-bg-gradient {
+    @apply bg-gradient-to-r from-cyan-300 to-emerald-300;
+  } */
+
+  /* Magenta Theme */
+
+  /* .main-bg-gradient {
+    @apply bg-gradient-to-r from-red-500 to-pink-400;
+  }
+
+  .light-bg-gradient {
+    @apply bg-gradient-to-r from-red-500 to-pink-400;
+  } */
 }

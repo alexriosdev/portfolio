@@ -18,7 +18,7 @@ export const Hero = () => {
           <h1 className={'font-mono md:text-lg text-base font-light'}>
             {hero.intro}
           </h1>
-          <h1 className="md:text-6xl text-4xl font-extrabold text-gradient-cyan">
+          <h1 className="md:text-6xl text-4xl font-extrabold text-gradient">
             {hero.title}
           </h1>
           <h1 className="md:text-6xl text-4xl font-bold mb-4">
@@ -26,7 +26,7 @@ export const Hero = () => {
           </h1>
           <Link
             activeClass="active"
-            className="btn-primary-helper"
+            className="btn-primary-helper cursor-pointer"
             to={link.to}
             spy={true}
             smooth={true}

@@ -13,7 +13,7 @@ const Card = ({ project }) => {
         href={project.link.to}
       >
         <img
-          className="rounded transform transition duration-500 hover:scale-110"
+          className="rounded transform transition duration-500 hover:scale-105"
           src={project.img}
           alt={project.title}
         />

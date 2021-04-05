@@ -18,8 +18,8 @@ export const Contact = () => {
             {contact.title}
           </h1>
           <p className="md:text-lg mb-8">{contact.text}</p>
-          <a className="btn-secondary" href={link.to}>
-            {link.text}
+          <a className="btn-secondary-helper" href={link.to}>
+            <span className="btn-secondary">{link.text}</span>
           </a>
         </div>
       </div>
