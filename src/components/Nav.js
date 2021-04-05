@@ -11,7 +11,7 @@ export const Nav = () => {
       <li className="nav-item">
         <Link
           activeClass="active"
-          className="px-3 py-2 flex items-center text-base uppercase font-thin leading-snug cursor-pointer text-white transition duration-300 ease-in-out hover:text-cyan-300"
+          className="px-3 py-2 flex items-center uppercase font-title font-normal leading-snug cursor-pointer text-white transition duration-300 ease-in-out hover:text-cyan-300"
           to={link.to}
           spy={true}
           hashSpy={true}
@@ -29,12 +29,12 @@ export const Nav = () => {
   return (
     <>
       <nav className="flex flex-wrap relative z-50">
-        <div className="fixed w-full font-mono">
+        <div className="fixed w-full">
           <nav className="flex flex-wrap items-center justify-between py-0 bg-black text-white">
             <div className="container lg:px-20 md:px-10 px-4 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <button
-                  className="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug cursor-pointer transition duration-500 ease-in-out hover:text-cyan-300"
+                  className="px-3 py-2 flex items-center text-2xl uppercase font-title font-bold leading-snug cursor-pointer transition duration-500 ease-in-out hover:text-cyan-300"
                   onClick={() => scroll.scrollToTop()}
                 >
                   {nav.logo}
@@ -77,7 +77,7 @@ export const Nav = () => {
                   })}
                   <li className="nav-item">
                     <a
-                      className="lg:my-0 my-2 px-5 py-2 flex items-center text-base uppercase font-bold leading-snug rounded-full bg-white text-black transition duration-500 ease-in-out hover:bg-cyan-300 hover:text-white"
+                      className="lg:my-0 my-2 px-5 py-2 flex items-center uppercase font-title font-bold leading-snug rounded-full bg-white text-black transition duration-500 ease-in-out hover:bg-cyan-300 hover:text-white"
                       href={resume.link.to}
                     >
                       {resume.link.text}

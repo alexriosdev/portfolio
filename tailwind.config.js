@@ -66,6 +66,11 @@ module.exports = {
       black: colors.black,
       white: colors.white,
     },
+    fontFamily: {
+      mono: ['Ubuntu Mono'],
+      title: ['Poppins'],
+      body: ['Source Sans Pro'],
+    },
   },
   variants: {
     extend: {},

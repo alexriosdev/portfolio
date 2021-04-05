@@ -12,7 +12,7 @@ export const About = () => {
         className="bg-gradient-to-r from-cyan-400 to-emerald-300 text-white flex flex-col justify-center items-center"
       >
         <div
-          className={`md:mx-20 mx-10 my-10 font-mono md:w-2/3 ${
+          className={`md:mx-20 mx-10 my-10 md:w-2/3 ${
             visible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
         >
@@ -26,8 +26,8 @@ export const About = () => {
               />
             </div>
           </div>
-          <p className="md:text-lg text-base mb-8">{about.text}</p>
-          <p className="md:text-lg text-base">{about.text}</p>
+          <p className="md:text-lg mb-8">{about.text}</p>
+          <p className="md:text-lg">{about.text}</p>
         </div>
       </div>
     </section>
