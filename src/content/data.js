@@ -127,7 +127,7 @@ export const content = {
   footer: {
     link: {
       text: `© ${year} alexriosdev`,
-      to: 'https:/github.com/alexriosdev',
+      to: 'https://github.com/alexriosdev',
     },
   },
 };
