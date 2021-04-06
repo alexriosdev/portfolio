@@ -103,7 +103,7 @@ export const content = {
     ],
     link: {
       text: 'View More',
-      to: 'https:/github.com/alexriosdev',
+      to: 'https://github.com/alexriosdev',
     },
   },
 
