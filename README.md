@@ -1,6 +1,6 @@
 # Portfolio
 
-This is the repository for my personal [portfolio site](https://www.alexriosdev.com/), built with React and Tailwind CSS. The purpose of this site is to showcase my most notable and recent projects, as well as demostrate my growth as a software developer.
+This is the repository for my personal [portfolio site](https://www.alexriosdev.com/) built with React and Tailwind CSS. The purpose of this site is to showcase my most notable and recent projects, as well as demostrate my growth as a software developer.
 
 ![demo](./public/demo.gif)
 
