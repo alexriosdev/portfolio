@@ -28,7 +28,7 @@ export const Nav = () => {
 
   return (
     <>
-      <nav className="bg-black text-white flex flex-col justify-center items-center fixed w-full z-50">
+      <div className="bg-black text-white flex flex-col justify-center items-center fixed w-full z-50">
         <nav className="flex flex-wrap items-center justify-between w-full px-4 lg:px-10">
           <div className="flex justify-between w-full lg:w-auto">
             <button
@@ -85,7 +85,7 @@ export const Nav = () => {
             </ul>
           </div>
         </nav>
-      </nav>
+      </div>
     </>
   );
 };
